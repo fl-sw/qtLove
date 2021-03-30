@@ -1,0 +1,22 @@
+﻿生成启动时间为 2021/3/30 22:13:28。
+     1>项目“D:\myWorkSpace\qtWS\firstTest\firstTest.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>CustomBuild:
+         Moc'ing mainwindow.h...
+         Uic'ing mainwindow.ui...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_mainwindow.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_mainwindow.cpp, GeneratedFiles\Release\moc_mainwindow.cpp.
+       ClCompile:
+         D:\software\visual studio\download\install\VC\bin\CL.exe /c /I. /I..\..\..\software\my_qt\anzhuang\5.5\msvc2013\include /I..\..\..\software\my_qt\anzhuang\5.5\msvc2013\include\QtWidgets /I..\..\..\software\my_qt\anzhuang\5.5\msvc2013\include\QtGui /I..\..\..\software\my_qt\anzhuang\5.5\msvc2013\include\QtANGLE /I..\..\..\software\my_qt\anzhuang\5.5\msvc2013\include\QtCore /Idebug /I. /I"..\..\..\software\my_qt\anzhuang\5.5\msvc2013\mkspecs\win32-msvc2013" /I.\GeneratedFiles /Zi /nologo /W3 /WX- /Od /Oy- /D _WINDOWS /D UNICODE /D WIN32 /D QT_WIDGETS_LIB /D QT_GUI_LIB /D QT_CORE_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Win32\Debug\\" /Fd"Win32\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt -w34100 -w34189 -w44996 GeneratedFiles\Debug\moc_mainwindow.cpp main.cpp mainwindow.cpp
+         moc_mainwindow.cpp
+         main.cpp
+         mainwindow.cpp
+         正在生成代码...
+       Link:
+         D:\software\visual studio\download\install\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"debug\\firstTest.exe" /NOLOGO /LIBPATH:D:\software\my_qt\anzhuang\5.5\msvc2013\lib /LIBPATH:D:/software/my_qt/anzhuang/5.5/msvc2013/lib /LIBPATH:D:\software\my_qt\anzhuang\5.5\msvc2013\lib D:\software\my_qt\anzhuang\5.5\msvc2013\lib\qtmaind.lib shell32.lib D:/software/my_qt/anzhuang/5.5/msvc2013/lib\Qt5Cored.lib D:\software\my_qt\anzhuang\5.5\msvc2013\lib\Qt5Widgetsd.lib D:\software\my_qt\anzhuang\5.5\msvc2013\lib\Qt5Guid.lib D:\software\my_qt\anzhuang\5.5\msvc2013\lib\Qt5Cored.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"debug\firstTest.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /MACHINE:X86 /SAFESEH "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" Win32\Debug\moc_mainwindow.obj
+         Win32\Debug\main.obj
+         Win32\Debug\mainwindow.obj
+         firstTest.vcxproj -> D:\myWorkSpace\qtWS\firstTest\debug\firstTest.exe
+     1>已完成生成项目“D:\myWorkSpace\qtWS\firstTest\firstTest.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:04.56
