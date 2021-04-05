@@ -7,5 +7,6 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.show();
 
-    return a.exec();
+	
+    return a.exec();	//让应用程序进入消息循环机制
 }
