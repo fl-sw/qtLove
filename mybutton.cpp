@@ -5,7 +5,7 @@ myButton::myButton(QWidget *parent)
 	: QPushButton(parent)
 {
 	ui.setupUi(this);
-	qDebug() << "my create" << endl;
+	//qDebug() << "my create" << endl;
 }
 
 myButton::~myButton()
