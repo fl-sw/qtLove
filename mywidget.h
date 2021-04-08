@@ -12,6 +12,7 @@ class MyWidget : public QWidget
 public:
 	MyWidget(QWidget *parent = 0);
 	~MyWidget();
+	void startClass();
 
 private:
 	Teacher* teacher;
