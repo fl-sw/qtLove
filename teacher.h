@@ -19,7 +19,7 @@ signals :
 
 
 public slots:
-	
+	void order(QString qstr);
 };
 
 #endif // TEACHER_H
