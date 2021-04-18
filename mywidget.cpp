@@ -48,7 +48,7 @@ void MyWidget::startClass()
 	disconnect(btnOverClass2, &QPushButton::clicked, teacher, noPraTeacherSignal);
 
 	void(Teacher:: *isPraTeacherSignalOrder)(QString qstr) = &Teacher::order;
-	connect(btnOverClass2, &QPushButton::clicked, teacher, isPraTeacherSignalOrder);
+	//connect(btnOverClass2, &QPushButton::clicked, teacher, isPraTeacherSignalOrder);
 	
 	//lambda
 	[=](QString str){
