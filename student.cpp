@@ -1,15 +1,18 @@
 #include "student.h"
 #include<QDebug>
+#include"teacher.h"
 
 Student::Student(QObject *parent)
 	: QObject(parent)
 {
+}
 
+Student::Student()
+{
 }
 
 Student::~Student()
 {
-
 }
 
 void Student::treat()

@@ -2,6 +2,7 @@
 #define STUDENT_H
 
 #include <QObject>
+#include"teacher.h"
 
 class Student : public QObject
 {
@@ -9,10 +10,12 @@ class Student : public QObject
 
 public:
 	Student(QObject *parent);
+	Student();
 	~Student();
 
 private:
-
+	QString qstr;
+	Teacher teacher;
 signals:
 
 public slots:

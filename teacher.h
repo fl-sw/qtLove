@@ -9,6 +9,7 @@ class Teacher : public QObject
 
 public:
 	Teacher(QObject *parent);
+	Teacher();
 	~Teacher();
 	void classIsOver();
 private:
@@ -20,6 +21,9 @@ signals :
 
 public slots:
 	void order(QString qstr);
+
+private:
+	int i;
 };
 
 #endif // TEACHER_H

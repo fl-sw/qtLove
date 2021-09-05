@@ -6,6 +6,10 @@ Teacher::Teacher(QObject *parent)
 {
 
 }
+Teacher::Teacher()
+{
+
+}
 
 Teacher::~Teacher()
 {
