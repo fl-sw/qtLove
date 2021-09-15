@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "mybutton.h"
+#include"myLable.h"
 #include<qmenubar.h>
 #include<qtoolbar.h>
 #include<qstatusbar.h>
@@ -12,7 +13,11 @@
 #include<qdebug.h>
 #include<qfiledialog.h>
 #include<qfontdialog.h>
-
+#include<qlistwidget.h>
+#include<qtablewidget.h>
+#include<qtoolbox.h>
+#include<qtabwidget.h>
+#include<qcombobox.h>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent)
@@ -25,6 +30,11 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::start()
+{
+	resize(800, 400);
+	
+}
+void MainWindow::start2()
 {
 	resize(500, 400);
 
@@ -100,5 +110,119 @@ void MainWindow::start()
 		qDebug() << filePath;
 	});
 
+
 	
+}
+
+
+
+IndexPage::IndexPage()
+{
+	pageNumber = 0;
+	page = new QWidget();
+	page->resize(800, 500);
+	page->setWindowTitle("INDEXPAGE");
+
+
+	QPushButton* nextStack = new QPushButton(page);
+	nextStack->move(500, 300);
+	nextStack->setText("nextPage");
+	nextStack->show();
+
+
+	start();
+	start1();
+	//start2();
+	page->show();
+
+	connect(nextStack, &QPushButton::clicked, this, &IndexPage::switchStackePage);
+
+}
+void IndexPage::switchStackePage()
+{
+	
+	void(IndexPage::*ptr[3])();
+	ptr[0] = &IndexPage::start;
+	ptr[1] = &IndexPage::start1;
+	ptr[2] = &IndexPage::start2;
+	int i = 0;
+	
+	(this->*ptr[pageNumber++])();
+	if (pageNumber == 3)
+		pageNumber = 0;
+
+}
+IndexPage::~IndexPage()
+{
+
+}
+void IndexPage::start()
+{
+	//条目，诗词内容
+	QListWidget* listContent = new QListWidget(page);
+	QListWidgetItem* poent1 = new QListWidgetItem("The hut is broken by the autumn wind");
+	poent1->setTextAlignment(Qt::AlignHCenter);
+	listContent->addItem(poent1);
+	QStringList* PoentList = new QStringList();
+	*PoentList << "the first words" << "second words" << "third words";
+	listContent->addItems(*PoentList);
+	listContent->resize(400, 250);
+	listContent->show();
+
+	MyLable *mylab = new MyLable(page);
+	mylab->setText("zi dingyi biao qian");
+	mylab->setFrameStyle(QFrame::Box);
+	mylab->move(500, 350);
+	
+}
+void IndexPage::start1()
+{
+	//表格
+	QTableWidget* tableContent = new QTableWidget(page);
+	tableContent->setRowCount(3);
+	tableContent->setColumnCount(3);
+	QStringList title;
+	title << "name" << "age" << "adress";
+	tableContent->setHorizontalHeaderLabels(title);
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			tableContent->setItem(i, j, new QTableWidgetItem("text[" + QString::number(i) + "][" + QString::number(j) + "]"));
+		}
+	}
+	tableContent->resize(400, 250);
+	tableContent->show();
+}
+
+void IndexPage::start2()
+{
+	//工具页面，
+	QToolBox* toolbox = new QToolBox(page);
+	toolbox->addItem(new QPushButton("button1", page), "add people");
+	toolbox->addItem(new QPushButton("button2", page), "my note");
+	toolbox->addItem(new QPushButton("button3", page), "setting");
+	toolbox->addItem(new QPushButton("button4", page), "about");
+	toolbox->addItem(new QLabel("weisfaofjao"), "sdfs");
+	QComboBox* combox = new QComboBox(toolbox);//下拉列表
+	combox->addItem("man");
+	combox->addItem("felman");
+	toolbox->addItem(combox, "pull down list");
+	//toolbox->resize(300, 240);
+	//toolbox->show();
+
+	QToolBox* toolbox2 = new QToolBox(page);
+	toolbox2->addItem(new QLabel("skdfjs"), "aaaa");
+	toolbox2->addItem(new QLabel("sdfkanl"), "bbbb");
+	toolbox2->addItem(new QLabel("jiunivand"), "cccc");
+	toolbox2->addItem(new QLabel("vadunva"), "dddd");
+	toolbox2->addItem(new QLabel("weisfaofjao"), "eeee");
+	//toolbox2->resize(300, 250);
+	//toolbox2->show();
+
+	QTabWidget* tab = new QTabWidget(page);//tab页面
+	tab->addTab(toolbox, "tab1");
+	tab->addTab(toolbox2, "tab2");
+	tab->resize(400, 240);
+	tab->show();
 }
