@@ -169,6 +169,7 @@ void IndexPage::start()
 	listContent->resize(400, 250);
 	listContent->show();
 
+	//自定义控件和事件
 	MyLable *mylab = new MyLable(page);
 	mylab->setText("zi dingyi biao qian");
 	mylab->setFrameStyle(QFrame::Box);

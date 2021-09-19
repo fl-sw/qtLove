@@ -3,6 +3,7 @@
 
 #include<qwidget.h>
 #include<qlabel.h>
+#include<QMouseEvent>
 class MyLable : public QLabel
 {
 	Q_OBJECT
@@ -11,6 +12,9 @@ public:
 	~MyLable();
 	virtual void enterEvent(QEvent* event);//鼠标进入事件
 	virtual void leaveEvent(QEvent* event);//鼠标离开
+	virtual void	mouseMoveEvent(QMouseEvent * ev);
+	virtual void	mousePressEvent(QMouseEvent * ev);
+	virtual void	mouseReleaseEvent(QMouseEvent * ev);
 signals:
 public slots:
 
